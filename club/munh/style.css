@@ -1,0 +1,133 @@
+.main{
+    width: 1000px;
+    height: 100px;
+    
+    margin: auto;
+    align-items:center;
+    display: flex;
+    
+}
+.main1{
+    
+    width: 1000px;
+    background-color: rgba(255, 255, 255, 0.877);
+    margin: auto;
+    border-radius: 0.5cm;
+    display: flex;
+    
+    
+}
+.home
+{
+    
+    width: 500px;
+    border: 1px solid;
+    height: 20px;
+    align-items: center;
+    display: flex;
+    margin-left: 250px;
+    margin-right: 100px;
+    background-color: rgba(255, 255, 255, 0.877);
+    border-radius: 5cm;
+}
+
+ul
+{
+    position:relative;
+    float: left;
+    margin-left: 20px;
+    align-items: center;
+    display: flex;  
+}
+
+ul li 
+{
+    display: inline-block;
+    margin: 0 10px;
+    align-items: center;
+    display: flex;  
+    padding-left: 10px;
+     
+}
+
+ul li a 
+{
+    text-decoration: none;
+    color: Black;
+    font-size: 17px; 
+}
+.zurag{
+    width: 300px;
+    padding-left: 80px;
+    padding-top: 25px;
+   
+    
+  
+}
+.location{
+    padding-left: 25px;
+    padding-top: 5px;
+    
+    width: 500px;
+
+}
+.about{
+    width: 850px;
+    line-height: 2;
+    padding-left: 35px;
+    margin: auto;
+    display: flex;
+    text-align: justify;
+    word-spacing: 5px;
+}
+.activity{
+    width: 900px;
+    line-height: 2;
+    padding-left: 80px;
+    margin: auto;
+    display: flex;
+    text-align: justify;
+    word-spacing: 5px;
+  
+}
+.ac_zurag{
+    width: 300px;
+    padding-left: 40px;
+    
+    
+}
+.ac_text{
+    width: 400px;
+    line-height: 2;
+    padding-left: 50px;
+    margin: auto;
+    display: flex;
+    text-align: justify;
+    word-spacing: 5px;
+}
+.contact{
+    width: 900px;
+    line-height: 2;
+    padding-left: 80px;
+    margin: auto;
+    display: flex;
+    text-align: justify;
+    word-spacing: 5px;
+}
+.con-text{
+    padding-left: 60px;
+    text-align: center;
+    width: 900px;
+}
+.button{
+    justify-content: space-evenly;
+}
+.navbtn{
+    padding-left: 20px;
+    
+}
+.cancel{
+    background-color: rgba(255, 255, 255, 0.877);
+    border-radius: 5cm;
+}
+
