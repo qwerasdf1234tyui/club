@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body style="background-color:#BB8FCE;">
+<body style="background-color:white;">
     <div class="container">
         <h2>Login Club</h2>
         <div class="form-container">

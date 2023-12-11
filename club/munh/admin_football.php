@@ -16,13 +16,13 @@ session_start();
     <tr>
       <td class="home">
         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Club</a></li>
-          <li><a href="">My account</a></li>
-          <li><a href="../nomin/logout.php">Logout</a></li>
+          <li class="li"><a href="">Home</a></li>
+          
+          <li class="li"><a href="">My account</a></li>
+          <li class="li"><a href="../nomin/logout.php">Logout</a></li>
         </ul>
       </td>
-      <td class=""><a href=""><button type="button">Member</button></a></td>
+      <td class=""><a href="../adiya/list.php"><button type="button">Member</button></a></td>
       <td class="navbtn"><a href="football_up.php"><button type="button">Edit</button></a></td>
     </tr>
     <tr>      

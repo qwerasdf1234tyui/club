@@ -130,4 +130,6 @@ ul li a
     background-color: rgba(255, 255, 255, 0.877);
     border-radius: 5cm;
 }
-
+.li{
+    margin-left: 33px;;
+}

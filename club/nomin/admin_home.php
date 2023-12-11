@@ -49,7 +49,7 @@
 							$query = "select * from club ";
 							$query_run = mysqli_query($connection, $query);
 							while($row= mysqli_fetch_array($query_run)) {
-								echo '<a href = "../munh/before_user_football.php?a='.$row["id"].'">';
+								echo '<a href = "../munh/admin_football.php?a='.$row["id"].'">';
 								echo '<img src="data:image;base64,'.base64_encode($row['image']).'" style="width: 250px; height:200px;">';
 								echo $row['name'];
 							}

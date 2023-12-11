@@ -12,7 +12,7 @@
     <div class="container">
         <h2>Admin Login</h2>
         <div class="form-container">
-            <form action="admin_process_login.php" method="post">
+            <form action="admin_process.php" method="post">
                 <div class="input-container">
                     <div class="input-name">
                         <input type="text" name="admin_id" placeholder="Username" class="text-name">
@@ -25,7 +25,7 @@
 
                 <div class="button-container">
                     <input type="submit" name="login" value="Login" onclick="location.href='admin_process.php';"class="button">
-                    <input type="button" value="Cancel" onclick="location.href='../nomin/index.php';" class="button">
+                    <input type="button" value="Cancel" onclick="location.href='../nomin/admin_home.php';" class="button">
                 </div>
             </form>
         </div>

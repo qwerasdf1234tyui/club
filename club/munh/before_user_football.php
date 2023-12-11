@@ -1,13 +1,9 @@
-<?php 
-session_start();
-?>
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>Club</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src = "confirm.js"></script>
     <style>
         body{background-color:rgb(203, 135, 235);}
         </style>
@@ -17,9 +13,9 @@ session_start();
     <tr>
       <td class="home">
         <ul>
-          <li><a href="../nomin/index.php">Home</a></li>
-          <li><a href="../munh/myacc.php">My account</a></li>
-          <li><a href="../saruul/login.php">Logout</a></li>
+          <li class="li"><a href="../nomin/index.php">Home</a></li>
+          <li class="li"><a href="../munh/myacc.php">My account</a></li>
+          <li class="li"><a href="../saruul/login.php">Logout</a></li>
         </ul>
       </td>
       <td class=""><a href="../adiya/slist.php"><button type="button">Request</button></a></td>
@@ -39,7 +35,8 @@ session_start();
  <?php
       $connection = mysqli_connect("localhost","root","");
       $db = mysqli_select_db($connection,'club');
-      $query = "SELECT * FROM club Where id='1'";
+      $club_id = $_GET['a'];
+      $query = "SELECT * FROM club Where id = $club_id";
       $query_run = mysqli_query($connection,$query); 
          while($row = mysqli_fetch_array($query_run)){
   ?>
@@ -64,7 +61,8 @@ session_start();
   <?php
     $connection = mysqli_connect("localhost","root","");
     $db = mysqli_select_db($connection,'club');
-    $query = "SELECT * FROM activity Where id='12'";
+    $club_id = $_GET['a'];
+    $query = "SELECT * FROM activity Where id= $club_id";
     $query_run = mysqli_query($connection,$query); 
     while($row = mysqli_fetch_array($query_run)){
    ?>
@@ -85,7 +83,8 @@ session_start();
 <?php
   $connection = mysqli_connect("localhost","root","");
   $db = mysqli_select_db($connection,'club');
-  $query = "SELECT * FROM club Where id='1'";
+  $club_id = $_GET['a'];
+  $query = "SELECT * FROM activity Where id=$club_id";
   $query_run = mysqli_query($connection,$query);
   while($row = mysqli_fetch_array($query_run)){
 ?>

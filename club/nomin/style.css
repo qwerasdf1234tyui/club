@@ -126,14 +126,18 @@ button {
     margin: 20px;
     justify-content: space-around;
     margin-left: 60px;
+    overflow: hidden;
+    width: 100%;
 }
 .image-container img {
     margin-right: 24px;
     margin-bottom: 20px;
     vertical-align: text-top;
     width:180px;
-    height:300px;
+    height:80%;
+    overflow: hidden;
 }
 .image-container a{
     padding: 10px;
+    width: 100%;
 }

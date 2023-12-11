@@ -9,6 +9,7 @@ body {
     margin: 50px auto 0;
     border-top: 15px solid blue;
     box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 150px;
 }
 
 .container h2 {
@@ -55,4 +56,15 @@ select {
 .register-link {
     margin-top: 10px;
     text-align: center;
+}
+.p{
+    text-decoration: none;
+    color: Black;
+    font-size: 30px; 
+}
+.h{
+    text-decoration: none;
+    color: Black;
+    font-size: 50px; 
+    margin-left: 120px;
 }

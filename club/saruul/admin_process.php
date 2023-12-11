@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         session_start();
         $_SESSION["admin_id"] = $row["id"];
         $_SESSION["admin_username"] = $row["username"];
-        header("Location: ../nomin/index.php");
+        header("Location: ../nomin/admin_home.php");
         exit();
     } else {
         // Invalid credentials, display a simple alert and redirect back to the login page

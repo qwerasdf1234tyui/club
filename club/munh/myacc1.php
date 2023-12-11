@@ -46,10 +46,10 @@ $conn->close();
     <tr>
       <td class="home">
         <ul>
-          <li><a href="../nomin/index.php">Home</a></li>
-          <li><a href="">Club</a></li>
-          <li><a href="">My account</a></li>
-          <li><a href="../saruul/login.php">Logout</a></li>
+          <li class="li"><a href="../nomin/index.php">Home</a></li>
+         
+          <li class="li"><a href="">My account</a></li>
+          <li class="li"><a href="../saruul/login.php">Logout</a></li>
         </ul>
       </td>
      
@@ -58,15 +58,15 @@ $conn->close();
     
 </table>
 <div class="container" >
-        <h2>My Account</h2>
+        <p class="h">My Account</p>
         <div class="form-container">
-            <p>Welcome, <?php echo $lastname . " " . $firstname; ?>!</p>
-            <p>Student ID: <?php echo $s_id; ?></p>
-            <p>Course: <?php echo $course; ?></p>
-            <p>Class: <?php echo $class_n; ?></p>
+            <input class="p" value=" <?php echo $lastname . " " . $firstname; ?>" >Welcome</p>
+            <p class="p">Student ID: <?php echo $s_id; ?></p>
+            <p class="p">Course: <?php echo $course; ?></p>
+            <p class="p">Class: <?php echo $class_n; ?></p>
 
            
-           <center><p class="navbtn"><a href="../nomin/index.php"><button type="button">Canccel</button></a><center>
+           
         </div>
     </div>
 </html>

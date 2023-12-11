@@ -16,10 +16,10 @@ session_start();
     <tr>
       <td class="home">
         <ul>
-          <li><a href="../nomin/index.php">Home</a></li>
-          <li><a href="">Club</a></li>
-          <li><a href="">My account</a></li>
-          <li><a href="../nomin/logout.php" >Logout</a></li>
+          <li class="li"><a href="../nomin/index.php">Home</a></li>
+          
+          <li class="li"><a href="">My account</a></li>
+          <li class="li"><a href="../nomin/logout.php" >Logout</a></li>
         </ul>
       </td>
       <td class=""><a href="../adiya/list.php"><button type="button">List</button></a></td>
