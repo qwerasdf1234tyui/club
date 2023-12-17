@@ -11,13 +11,30 @@
 <body>
   <table class="main">
     <tr>
-      <td class="home">
-        <ul>
-          <li class="li"><a href="../nomin/index.php">Home</a></li>
-          <li class="li"><a href="../munh/myacc.php">My account</a></li>
-          <li class="li"><a href="../saruul/login.php">Logout</a></li>
-        </ul>
-      </td>
+    <nav class="nav">
+                <!--Menu-->
+                    <nav class="nav">
+                        <!-- Logo -->
+                        <div class="logo"><i class = "fas fa-blog"></i>
+                        <p style="display:inline-block;">
+                            <a href="index.php" class="logo">
+                                <img src="../nomin/images/iuulogo_.jpg" alt="" />
+                                <h1 class = "h1_logo">ОУУИС</h1>
+                            </a>
+                        </p>
+                            
+                        </div>
+                        <form method="post" action = "search_result.php">
+                        <!--Menu-->
+                        <ul class = "menu">
+                            <li><a href="../nomin/index.php">Home</a></li>
+                            <li><a href="../munh/myacc1.php">My account</a></li>
+                            <li><a href="./logout.php" >Logout</a></li>
+                            <li><input type="text" placeholder="Search.." name = "search" required="required"/></li><button>search</button>
+        
+                        </ul>
+                        </form>
+    </nav>
       <td class=""><a href="../adiya/slist.php"><button type="button">Request</button></a></td>
       
     </tr>

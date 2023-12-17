@@ -4,21 +4,35 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style2.css">
+        <link rel="stylesheet" href="style.css">
         <title> member list</title>
     </head>
 <body>
 <div class="wrapper">
-<div class="container_my-5">
-        <table class="table">
-            <thead>
-                <tr>
-                <td> <a class='btn  btn-sm' href='../nomin/index.php'><picture><img  controls height="35" widght="35" src="./image/p1.png" alt="g" style="width:;"></picture></a></td>
-                <td><picture><a class='btn  btn-sm' href='./logout.php'><img  controls height="35" widght="35" src="image/p2.jpg" alt="o" style="width:;"></picture> </a></td>
-                <td><picture><a class='btn  btn-sm' href='myaccount.php'><img  controls height="35" widght="35" src="image/p3.jpg" alt="images" style="width:;"></picture></a.</td>
-            </tr>
-        </thead>
-    </table>
+<nav class="nav">
+                <!--Menu-->
+                    <nav class="nav">
+                        <!-- Logo -->
+                        <div class="logo"><i class = "fas fa-blog"></i>
+                        <p style="display:inline-block;">
+                            <a href="index.php" class="logo">
+                                <img src="../nomin/images/iuulogo_.jpg" alt="" />
+                                <h1 class = "h1_logo">ОУУИС</h1>
+                            </a>
+                        </p>
+                            
+                        </div>
+                        <form method="post" action = "search_result.php">
+                        <!--Menu-->
+                        <ul class = "menu">
+                            <li><a href="../nomin/index.php">Home</a></li>
+                            <li><a href="../munh/myacc1.php">My account</a></li>
+                            <li><a href="./logout.php" >Logout</a></li>
+                            <li><input type="text" placeholder="Search.." name = "search" required="required"/></li><button>search</button>
+        
+                        </ul>
+                        </form>
+    </nav>
 </div>
     <div class="button_">
             <button type=button><a href='./request.php'>Request</a></button>

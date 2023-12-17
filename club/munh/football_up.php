@@ -74,15 +74,10 @@ input{
     $date = $_POST['date'];
     $time = $_POST['time'];
     $about = $_POST['about'];
-    $image = $_FILES['image']['name'];
-    $image_temp = $_FILES['image']['tmp_name'];
-
-  if($image_temp != ""){
-
-    move_uploaded_file($image_temp , "images/$image");
+ 
 
 
-    $sql = "UPDATE club SET name='$name',location='$location',email='$email',phone='$phone',date='$date',time='$time',image='$image',about='$about' where id='1'";
+    $sql = "UPDATE club SET name='$name',location='$location',email='$email',phone='$phone',date='$date',time='$time',about='$about' where id='1'";
     $query_run = mysqli_query($connection,$sql);
 
     if($query_run)
@@ -95,6 +90,6 @@ input{
     else{
         echo '<script> alert("Not Updated") </script>';
     }
- }}
+ }76
 
 ?>

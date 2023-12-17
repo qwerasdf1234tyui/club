@@ -61,7 +61,7 @@ $conn->close();
         <p class="h">My Account</p>
         <div class="form-container">
             <input class="p" value=" <?php echo $lastname . " " . $firstname; ?>" >Welcome</p>
-            <p class="p">Student ID: <?php echo $s_id; ?></p>
+           <p> <input class="p" value="  <?php echo $s_id; ?>"> Student ID:</p>
             <p class="p">Course: <?php echo $course; ?></p>
             <p class="p">Class: <?php echo $class_n; ?></p>
 

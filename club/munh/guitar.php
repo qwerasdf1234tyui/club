@@ -1,8 +1,23 @@
+<?php
+if(isset($_GET['ID'])) {
+  $connection = mysqli_connect("localhost","root","");
+  $db = mysqli_select_db($connection,'club');
+  $ID = mysqli_real_escape_string($connection, $_GET['ID']);
+
+  $sql = "SELECT * FROM club join activity on activity.ac_id=club.a_id WHERE id='$ID'";
+  $result = mysqli_query($connection, $sql ) or die("Bad Query: $sql");
+  $row = mysqli_fetch_array($result);
+  
+  
+}else{
+  header('Location: index.php');
+}
+?>
 <?php 
 session_start();
+?>
 
 
- ?>
  <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +36,7 @@ session_start();
     <li><a href="">Home</a></li>
     <li><a href="">Club</a></li>
     <li><a href="">My account</a></li>
-    <li><a href="login.php?logout=<?php echo $user_id; ?>" onclick="return confirm('Are you sure you want to exit?');" >Logout</a></li>
+    <li><a href="login.php" onclick="return confirm('Are you sure you want to exit?');" >Logout</a></li>
 </ul></td>
 <td class=""><a href=""><button type="button">Request</button></a>
 <td class="navbtn"><a href="guitar_up.php"><button type="button">Edit</button></a>
@@ -37,20 +52,9 @@ session_start();
  </td></tr>
 
  <table class="main1">
- <?php
-      $connection = mysqli_connect("localhost","root","");
-      $db = mysqli_select_db($connection,'club');
-
-     
-      $query = "SELECT * FROM club Where id='2'";
-      $query_run = mysqli_query($connection,$query); 
-     
-         while($row = mysqli_fetch_array($query_run)){
-   ?>
 
  <tr class="zurag"><td class="zurag">
  <?php echo '<img src="data:image;base64,'.base64_encode($row['image']).'" alt="Image" style="width: 275px; height: 183px;"  >'; ?>
-
  </td>
  <td class="location">
     <h1><?php echo $row['name']; ?></h1>
@@ -62,42 +66,18 @@ session_start();
         <h1 id="ab">About</h1>
         <p><b> <?php echo $row['about']; ?>
  <b></p></td>
- <?php
-         }
-         ?>
- 
- <?php
-      $connection = mysqli_connect("localhost","root","");
-      $db = mysqli_select_db($connection,'club');
 
-     
-      $query = "SELECT * FROM activity Where id='1'";
-      $query_run = mysqli_query($connection,$query); 
-     
-         while($row = mysqli_fetch_array($query_run)){
-   ?>
 
  <tr class="activity"><td>
         <h1 id="ac">Activity</h1>
         <tr class="ac_zurag"><td class="ac_zurag">
-        <div class="ac_zurag"> <?php echo '<img src="data:image;base64,'.base64_encode($row['image']).'" alt="Image" style="width: 275px" >'; ?></div</td>
+        <div class="ac_zurag"> <?php echo '<img src="data:image;base64,'.base64_encode($row['ac_image']).'" alt="Image" style="width: 275px" >'; ?></div</td>
         <td class="ac_text">
         <b><?php echo $row['text']; ?></b>
      
 </tr>
-<?php
-         }
-         ?>
-<?php
-      $connection = mysqli_connect("localhost","root","");
-      $db = mysqli_select_db($connection,'club');
 
-     
-      $query = "SELECT * FROM club Where id='1'";
-      $query_run = mysqli_query($connection,$query); 
-     
-         while($row = mysqli_fetch_array($query_run)){
-   ?>
+
 
 <tr class="contact"><td>
         <h1 id="con">Contact</h1>
@@ -105,9 +85,7 @@ session_start();
         <b>Phone: <?php echo $row['phone']; ?>
     <p>Email: <?php echo $row['email'] ?></p></b>
 </td></tr>
-<?php
-         }
-         ?>
+
     
  </td>
  </tr>
@@ -115,5 +93,4 @@ session_start();
 </table>   
     </body>
     </html>
-    
     

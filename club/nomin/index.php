@@ -5,18 +5,13 @@
 		<title>iuu дугуйлан</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href = "style.css">
+		<link rel="stylesheet" href = "change.css">
 	</head>
-	<body class="is-preload">
+	<body>
 	<?php
-	session_start();
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$database = "club";
-	$connection = new mysqli($servername, $username, $password, $database);
-	if ($connection->connect_error) {
-		die("Connection failed". $connection->connect_error);}?>
+$connection = mysqli_connect("localhost","root","");
+$db = mysqli_select_db($connection,'club');
+	?>
 
 	<!-- Wrapper -->
 		<div id="wrapper">
@@ -28,7 +23,8 @@
 						<a href="index.php" class="logo">
 							<img src="images/iuulogo_.jpg" alt="" />
 							<h1 class = "h1_logo">ОУУИС</h1>
-						</a></p>
+						</a>
+					</p>
 						
 					</div>
 					<form method="post" action = "search_result.php">
@@ -45,16 +41,51 @@
 			<!-- Main -->
 			<div id="wrap">
 				<div class="image-container">
-						<?php
-							$query = "select * from club ";
-							$query_run = mysqli_query($connection, $query);
-							while($row= mysqli_fetch_array($query_run)) {
-								echo '<a href = "../munh/before_user_football.php?a='.$row["id"].'">';
-								echo '<img src="data:image;base64,'.base64_encode($row['image']).'" style="width: 250px; height:200px;">';
-								echo $row['name'];
+					<form action="" accept-charset="utf-8" name="cc" method="post" >
+					<fieldset>
+						<legend>Art</legend>
+							<?php
+							$query = "SELECT * FROM club where category= 1";
+							$query_run = mysqli_query($connection, $query) or die("Bad Query: $sql");
+								if(mysqli_num_rows($query_run) > 0) {
+								while($row= mysqli_fetch_array($query_run)) {
+									echo "<a href = '../munh/guitar.php?ID={$row['id']}'>";
+									echo '<img src="data:image;base64,'.base64_encode($row['image']).'" style="width: 250px; height:200px;"><br><br>';
+									echo $row['name'].'<br>';
+								}
 							}
-						?>
-					</a>
+							?></a>
+					</fieldset>
+					<fieldset>
+						<legend>Reading</legend>
+						<?php
+						$query = "SELECT * FROM club where category= 2";
+						$query_run = mysqli_query($connection, $query) or die("Bad Query: $sql");
+							if(mysqli_num_rows($query_run) > 0) {
+							while($row= mysqli_fetch_array($query_run)) {
+								echo "<a href = '../munh/guitar.php?ID={$row['id']}'>";
+								echo '<img src="data:image;base64,'.base64_encode($row['image']).'" style="width: 250px; height:200px;"><br>';
+								echo $row['name'].'<br>';
+							}
+						}
+						?></a>
+					</fieldset>
+					<fieldset>
+						<legend>Sport</legend>
+						<?php
+						$query = "SELECT * FROM club where category= 5";
+						$query_run = mysqli_query($connection, $query) or die("Bad Query: $sql");
+							if(mysqli_num_rows($query_run) > 0) {
+							while($row= mysqli_fetch_array($query_run)) {
+								echo "<a href = '../munh/guitar.php?ID={$row['id']}'>";
+								echo '<img src="data:image;base64,'.base64_encode($row['image']).'" style="width: 250px; height:200px;"><br>';
+								echo $row['name'].'<br>';
+							}
+						}
+						?></a>
+					</fieldset>
+					</form>
+					
 				</div>
 			</div>
 		</div>
